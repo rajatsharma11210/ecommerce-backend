@@ -222,7 +222,6 @@ Pagination
 
 # 📌 Future Improvements
 
-- Docker
 - Image Upload
 - Cloud Storage
 - Deployment
