@@ -7,6 +7,11 @@ This project demonstrates authentication, authorization, product management, pag
 TSET -
 https://ecommerce-backend-kohi.onrender.com/swagger-ui/index.html
 ---
+ACCOUNTS -
+FOR USER - You Can Use Any Random Gmail ,name ,password then login with it and reade for instruction below.
+FOR ADMIN - email - Admin@gmail.com
+password - Admin211
+
 
 # 🚀 Features
 
