@@ -19,26 +19,20 @@ This project demonstrates secure authentication, role-based authorization, produ
 ## 👤 User Account
 
 Create a new account using:
-
 ```
 POST /api/auth/register
 ```
 
 Login using your registered credentials to receive a JWT token.
 
----
-
 ## 👑 Admin Account
 
 **Email**
-
 ```
 Admin@gmail.com
-```
 
 **Password**
 
-```
 Admin211
 ```
 
@@ -251,31 +245,7 @@ Now all protected APIs can be accessed.
 
 ✔ Delete Products
 
----
-
-# 📦 Available APIs
-
-## Get All Products
-
-```
-GET /api/products
-```
-
----
-
-## Get Product By ID
-
-```
-GET /api/products/{id}
-```
-
----
-
-## Search Products
-
-```
-GET /api/products/search?keyword=laptop
-```
+--
 
 ---
 
@@ -313,7 +283,8 @@ GET /api/products?page=0&size=5&sortBy=id
 - Order Management
 - Payment Gateway Integration
 - Cloud Image Upload
-- Refresh Token Authentication
+- Refresh Token 
+Authentication
 - Unit Testing (JUnit)
 - Docker Compose
 - CI/CD Pipeline
@@ -327,9 +298,9 @@ GET /api/products?page=0&size=5&sortBy=id
 **Java Backend Developer**
 
 GitHub
-
 ```
-https://github.com/YOUR_USERNAME
+https://github.com/rajatsharma11210
+
 ```
 
 ---
@@ -337,3 +308,4 @@ https://github.com/YOUR_USERNAME
 # ⭐ Support
 
 If you found this project helpful, consider giving it a **Star ⭐** on GitHub.
+
