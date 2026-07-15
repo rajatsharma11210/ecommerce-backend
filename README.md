@@ -1,52 +1,106 @@
 # 🛒 E-Commerce Backend API
 
-A secure RESTful E-Commerce Backend built using Spring Boot, Spring Security, JWT Authentication, MySQL, and JPA/Hibernate.
+> **A secure RESTful E-Commerce Backend built using Spring Boot, Spring Security, JWT Authentication, MySQL, JPA/Hibernate, and Swagger UI.**
 
-This project demonstrates authentication, authorization, product management, pagination, sorting, searching, filtering, and API documentation using Swagger.
+This project demonstrates secure authentication, role-based authorization, product management, pagination, sorting, searching, filtering, and complete REST API documentation.
 
-TSET -
-https://ecommerce-backend-kohi.onrender.com/swagger-ui/index.html
 ---
-ACCOUNTS -
-FOR USER - You Can Use Any Random Gmail ,name ,password then login with it and reade for instruction below.
-FOR ADMIN - email - Admin@gmail.com
-password - Admin211
 
-FOR POST Feature -
-You Can Use ImageUrl - http://abc.com/laptop.png
+# 🌐 Live Demo
 
-# 🚀 Features
+## 🚀 Swagger UI
 
-## Authentication
+### https://ecommerce-backend-kohi.onrender.com/swagger-ui/index.html
+
+---
+
+# 🔑 Demo Accounts
+
+## 👤 User Account
+
+Create a new account using:
+
+```
+POST /api/auth/register
+```
+
+Login using your registered credentials to receive a JWT token.
+
+---
+
+## 👑 Admin Account
+
+**Email**
+
+```
+Admin@gmail.com
+```
+
+**Password**
+
+```
+Admin211
+```
+
+Use the Admin account to test all protected APIs.
+
+---
+
+## 🖼 Sample Image URL
+
+Use the following image while creating a product.
+
+```
+https://images.unsplash.com/photo-1496181133206-80ce9b88a853
+```
+
+---
+
+# ✨ Features
+
+## 🔐 Authentication
+
 - User Registration
 - User Login
 - JWT Authentication
 - BCrypt Password Encryption
-- Role-Based Authorization (ADMIN & USER)
-
-## Product Management
-- Create Product (ADMIN)
-- Update Product (ADMIN)
-- Delete Product (ADMIN)
-- Get Product By ID
-- Get All Products
-- Pagination
-- Sorting
-- Search Products
-- Filter Products by Price
-
-## Security
-- Spring Security
-- JWT Token Validation
-- Custom Access Denied Handler
-- Global Exception Handling
-
-## Documentation
-- Swagger UI
+- Role-Based Authorization
+- Secure API Access
 
 ---
 
-# 🛠 Tech Stack
+## 📦 Product Management
+
+- Create Product (Admin)
+- Update Product (Admin)
+- Delete Product (Admin)
+- Get All Products
+- Get Product By ID
+- Search Products
+- Filter Products by Price
+- Pagination
+- Sorting
+
+---
+
+## 🛡 Security
+
+- Spring Security
+- JWT Token Validation
+- Role-Based Access Control
+- Custom Access Denied Handler
+- Global Exception Handling
+
+---
+
+## 📖 API Documentation
+
+- Swagger UI
+- Interactive API Testing
+
+---
+
+# 🚀 Tech Stack
 
 - Java 21
 - Spring Boot
@@ -57,59 +111,61 @@ You Can Use ImageUrl - http://abc.com/laptop.png
 - MySQL
 - Maven
 - Swagger (OpenAPI)
+- Docker
+- Git & GitHub
+- Render
+- Railway MySQL
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
-controller/
-
-service/
-
-repository/
-
-entity/
-
-dto/
-
-security/
-
-exception/
-
-config/
+```text
+src
+│
+├── controller
+├── service
+├── repository
+├── entity
+├── dto
+├── security
+├── config
+├── exception
+└── util
+```
 
 ---
 
-# ⚙️ Installation
+# ⚙ Installation
 
-## 1. Clone Repository
+## 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 ```
 
-## 2. Open Project
+---
 
-Open the project in:
+## 2️⃣ Open Project
+
+Open the project using:
 
 - IntelliJ IDEA
 - VS Code
 
 ---
 
-## 3. Create Database
+## 3️⃣ Create MySQL Database
 
 Database Name
 
-```
+```text
 ecommerce
 ```
 
 ---
 
-## 4. Configure application.properties
-
-Update your MySQL username and password.
+## 4️⃣ Configure application.properties
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
@@ -118,9 +174,12 @@ spring.datasource.password=YOUR_PASSWORD
 
 spring.jpa.hibernate.ddl-auto=update
 ```
+
 ---
 
-## 5. Run Project
+## 5️⃣ Run Application
+
+Using Maven
 
 ```bash
 mvn spring-boot:run
@@ -136,28 +195,28 @@ BackendApplication.java
 
 # 📖 Swagger Documentation
 
-Open:
+Open
 
-https://ecommerce-backend-kohi.onrender.com/swagger-ui/index.html
+### https://ecommerce-backend-kohi.onrender.com/swagger-ui/index.html
 
-# 🔐 Authentication
+---
+
+# 🔐 Authentication Guide
 
 ## Register
 
-POST
+```
+POST /api/auth/register
+```
 
-```
-/api/auth/register
-```
+Create a new account.
 
 ---
 
 ## Login
 
-POST
-
 ```
-/api/auth/login
+POST /api/auth/login
 ```
 
 Login returns a JWT Token.
@@ -169,70 +228,112 @@ Click **Authorize** in Swagger.
 Enter
 
 ```
-Bearer YOUR_TOKEN
+Bearer YOUR_JWT_TOKEN
 ```
 
-Now protected APIs can be accessed.
+Now all protected APIs can be accessed.
 
 ---
 
-# 👤 User Permissions
+# 👥 Roles & Permissions
 
-USER can
+## USER
 
-- View Products
-
-ADMIN can
-
-- Create Product
-- Update Product
-- Delete Product
+✔ View Products
 
 ---
 
-# 📦 Product APIs
+## ADMIN
 
-GET
+✔ Create Products
 
-```
-/api/products
-```
+✔ Update Products
 
-Get Product By ID
+✔ Delete Products
 
-```
-/api/products/{id}
-```
+---
 
-Search Product
+# 📦 Available APIs
+
+## Get All Products
 
 ```
-/api/products/search?keyword=laptop
+GET /api/products
 ```
 
-Filter Product
+---
+
+## Get Product By ID
 
 ```
-/api/products/filter?minPrice=1000&maxPrice=5000
+GET /api/products/{id}
 ```
 
-Pagination
+---
+
+## Search Products
 
 ```
-/api/products?page=0&size=5&sortBy=id
+GET /api/products/search?keyword=laptop
 ```
 
-# 📌 Future Improvements
+---
 
-- Image Upload
-- Cloud Storage
-- Deployment
-- Unit Testing
+## Filter Products
+
+```
+GET /api/products/filter?minPrice=1000&maxPrice=5000
+```
+
+---
+
+## Pagination
+
+```
+GET /api/products?page=0&size=5&sortBy=id
+```
+
+---
+
+# ☁ Deployment
+
+## Backend
+
+**Render**
+
+## Database
+
+**Railway MySQL**
+
+---
+
+# 🚧 Future Improvements
+
+- Shopping Cart
+- Order Management
+- Payment Gateway Integration
+- Cloud Image Upload
 - Refresh Token Authentication
+- Unit Testing (JUnit)
+- Docker Compose
+- CI/CD Pipeline
+
 ---
 
 # 👨‍💻 Author
 
-Rajat Sharma
+## Rajat Sharma
 
-Java Backend Developer
+**Java Backend Developer**
+
+GitHub
+
+```
+https://github.com/YOUR_USERNAME
+```
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a **Star ⭐** on GitHub.
