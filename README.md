@@ -12,6 +12,8 @@ FOR USER - You Can Use Any Random Gmail ,name ,password then login with it and r
 FOR ADMIN - email - Admin@gmail.com
 password - Admin211
 
+FOR POST Feature -
+You Can Use ImageUrl - http://abc.com/laptop.png
 
 # 🚀 Features
 
